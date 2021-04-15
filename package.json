@@ -1,0 +1,17 @@
+{
+  "name": "herokureact",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "cd client && npm install && npm run build && npm start && cd .. && cd server && npm install && npm start",
+    "heroku-postbuild": "cd client && npm install && npm run build"
+  },
+  "engines": {
+    "node": "12.16.1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
