@@ -1,5 +1,5 @@
 const express = require("express");
-const path = require('path');
+// const path = require('path');
 const usersController = require("./controllers/users-controller");
 const vacationsController = require("./controllers/vacations-controller");
 const errorHandler = require("./errors/error-handler");
@@ -31,19 +31,19 @@ server.use(loginFilter());
 server.use("/api/users", usersController);
 server.use("/api/vacations", vacationsController);
 
-server.use(express.static(path.join(__dirname, 'client/build')));
+// server.use(express.static(path.join(__dirname, 'client/build')));
 
-server.get("/", function (req, res) {
+// server.get("/", function (req, res) {
 
-    res.sendFile(path.join(__dirname, "client/build", "index.html"));
+//     res.sendFile(path.join(__dirname, "client/build", "index.html"));
 
-});
+// });
 
-server.get("/*", function (req, res) {
+// server.get("/*", function (req, res) {
 
-    res.sendFile(path.join(__dirname, "client/build", "index.html"));
+//     res.sendFile(path.join(__dirname, "client/build", "index.html"));
 
-});
+// });
 
 
 server.use(errorHandler);
